@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <link rel="shortcut icon" href="/img/favicon.ico">
+  <title>The Iron Dev LLC - irondeveloper.com</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="css/styles.css" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-sm navbar-light bg-light fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="#home">The Iron Dev LLC</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive"
+        aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#home">Home
+              <span class="sr-only">(current)</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#about">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#services">Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contact">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Header - set the background image for the header in the line below -->
+  <header id="home" class="py-5 bg-image-full" style="background-image: url('https://unsplash.it/1900/1080?image=860'); height:400px">
+    <img class="img-fluid d-block mx-auto" src="" alt="">
+  </header>
+
+  <!-- Content section -->
+  <section class="py-5" id="about">
+    <div class="container">
+      <h1>About</h1>
+      <p class="lead">Tech focused consulting</p>
+      <p>The Iron Dev has a wide set of technology and consulting skills. He does full stack dev.
+        What sets him apart?  Microsoft SharePoint. Yes, SharePoint on prem or SharePoint Online
+        and everything Office 365, which makes him great for enterprise level projects. His 
+        philosophy is no BS consulting and to make sure your requirements are delivered.
+      </p>
+    </div>
+  </section>
+
+  <!-- Image Section - set the background image for the header in the line below -->
+  <section class="py-5 bg-image-full" style="background-image: url('https://unsplash.it/1900/1080?image=814');">
+    <div style="height: 400px;"></div>
+  </section>
+
+  <!-- Content section -->
+  <section class="py-5" id="services">
+    <div class="container">
+      <h1>Services</h1>
+      <p class="lead">Non-exhaustive list of what we do</p>
+      <ul>
+        <li>Full stack dev</li>
+        <li>SharePoint admin and configuration</li>
+        <li>SharePoint customization and branding</li>
+        <li>AWS config, dev and deployments</li>
+        <li>Self hosted and cloud based environments</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Image Section - set the background image for the header in the line below -->
+  <section class="py-5 bg-image-full" style="background-image: url('https://unsplash.it/1900/1080?image=825');">
+    <div style="height: 400px;"></div>
+  </section>
+
+  <!-- Content section -->
+  <section class="py-5" id="contact">
+    <div class="container">
+      <h1>Contact</h1>
+      <p class="lead">Send me some email</p>
+      <p>Ask me any questions about rates, skills or anything tech related.</p>
+      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
+        Open form
+      </button>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-5 bg-dark">
+    <div class="container">
+      <p class="m-0 text-center text-white">
+        <a href="https://github.com/lbellows" target="_blank" class="fa fa-github"></a>
+        <a href="#" data-toggle="modal" data-target="#myModal" class="fa fa-paper-plane-o"></a>
+        <span style="padding-left: 15px"> &copy; <span id="curYear"></span> The Iron Dev LLC</p></span>
+    </div>
+    <!-- /.container -->
+  </footer>
+
+  <!-- The Modal -->
+<div class="modal" id="myModal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+  
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">Contact</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+  
+        <!-- Modal body -->
+        <div class="modal-body">
+          <form id="form">
+            <input class="form-group form-control" id="msgemail" placeholder="email" />
+            <input class="form-group form-control" id="msgtopic" placeholder="topic" />
+            <textarea class="form-group form-control" id="msgbody" placeholder="body"></textarea>
+          </form>
+          <h3 id="success" class="col-sm-4 col-sm-offset-4" style="display:none">Thanks!</h3>
+          <code class="col-sm-4 col-sm-offset-4" id="debug" style="display:none"></code>
+        </div>
+  
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary" onclick="iron.send()">Send</button>
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+  
+      </div>
+    </div>
+  </div>
+
+  <script src="https://sdk.amazonaws.com/js/aws-sdk-2.9.0.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" crossorigin="anonymous"></script>
+  <script src="js/app.js"></script>
+
+</body>
+
+</html>

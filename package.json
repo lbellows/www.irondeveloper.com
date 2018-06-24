@@ -1,0 +1,18 @@
+{
+    "title": "The Iron Dev LLC",
+    "name": "www.irondeveloper.com",
+    "version": "1.0.0",
+    "description": "Website",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "s3": "aws s3 sync public/. s3://%npm_package_name%"
+      },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "dependencies": {},
+    "devDependencies": {
+        "browser-sync": "^2.24.4",
+        "gulp": "^3.9.1"
+    }
+}
