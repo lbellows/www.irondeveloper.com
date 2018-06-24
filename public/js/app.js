@@ -1,11 +1,10 @@
 var iron = iron || {};
 
-
-
 $(function (){
   var curDate = new Date();
   $('#curYear').text(curDate.getUTCFullYear());
 
+  //setup scrolling effect
   $("nav a").on('click', function(event) {
     if (this.hash !== "") {
       event.preventDefault();
@@ -19,9 +18,9 @@ $(function (){
   });
 });
 
-
+//send email
 iron.send = function(){
-  AWS.config.region = 'us-east-1'; // Region
+  AWS.config.region = 'us-east-1';
   AWS.config.credentials = new AWS.CognitoIdentityCredentials({
       IdentityPoolId: 'us-east-1:6459ce9d-d22f-4737-a7ed-e50260fb0b02',
   });
