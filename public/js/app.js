@@ -40,6 +40,8 @@ iron.send = function(){
       else{
           $('#form').toggle();
           $('#success').toggle();
+          $('#sendBtn').toggle();
+          
       }
   });
 }
